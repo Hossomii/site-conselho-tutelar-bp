@@ -1,0 +1,182 @@
+/* =================================== */
+/* 0. VARIÁVEIS    */
+/* =================================== */
+
+:root {
+    /* Fontes */
+    --fonte-principal: 'Heebo', sans-serif;
+
+    /* Paleta de Cores do Protótipo */
+    --cor-vermelha: #c13b31;
+    --cor-texto-preto: #212529;
+    --cor-texto-branco: #ffffff;
+    --cor-bloco-emergencia: #075334; /* Verde-acinzentado escuro do print */
+    --cor-fundo-secao: #f9f9f9; /* Cinza claro */
+    --cor-borda-sutil: #e0e0e0;
+}
+/* =================================== */
+/* 1. ESTILOS GLOBAIS                  */ 
+/* =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    color: var(--cor-texto-preto);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =================================== */
+/* 1.5 BARRA DO TOPO (ENDEREÇO)        */
+/* =================================== */
+
+.top-bar {
+    background-color: var(--cor-fundo-claro); /* Usa o cinza claro que definimos */
+    padding: 8px 0; /* Espaçamento vertical pequeno para deixá-la fina */
+    font-size: 14px; /* Tamanho da fonte um pouco menor */
+    color: var(--cor-texto-secundario);
+    border-bottom: 1px solid var(--cor-borda-sutil);
+}
+
+.top-bar p {
+    /* Alinha o ícone e o texto na mesma linha */
+    display: flex;
+    align-items: center;
+}
+
+.top-bar i {
+    color: var(--cor-vermelha); /* Deixa o ícone vermelho para dar destaque */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* =================================== */
+/* 2. CABEÇALHO                        */
+/* =================================== */
+
+header {
+    background-color: var(--cor-fundo-branco);
+    padding: 10px 0;
+}
+
+/* O container principal do header que alinha tudo */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* O container dos logos */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre os logos */
+}
+
+/* Tamanho das imagens dos logos */
+.logo-img {
+    height: 55px;
+}
+
+/* Estilos da lista do menu */
+nav ul li {
+    display: inline-block; /* Coloca os itens lado a lado */
+    margin-left: 20px;
+}
+
+/* Estilos dos links do menu */
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto-preto);
+    font-weight: 500; /* Peso médio da fonte Heebo */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--cor-vermelha); /* Vermelho ao passar o mouse */
+}
+
+/* Bloco de Emergência */
+.bloco-emergencia {
+    background-color: var(--cor-bloco-emergencia);
+    color: var(--cor-texto-branco);
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.bloco-emergencia i {
+    font-size: 24px;
+}
+
+.texto-emergencia span {
+    font-size: 13px;
+    display: block;
+    line-height: 1.2;
+}
+
+.texto-emergencia strong {
+    font-size: 16px;
+    font-weight: 700; /* Negrito */
+}
+
+/* =================================== */
+/* 3. Hero (BANNER)                      */
+/* =================================== */
+
+.hero {
+  position: relative;
+  color: var(--cor-texto-branco);
+  padding: 180px 0;
+
+  /* Imagem de fundo */
+  background-image: url('../images/localBombeiros.jpeg');
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo acima do pseudo-elemento */
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  max-width: 1200px;
+}
+
+.hero .subtitulo {
+  font-size: 1.3rem;
+  font-weight: 400;
+  max-width: 780px;
+  opacity: 0.9;
+}
