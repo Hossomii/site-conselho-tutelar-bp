@@ -1,0 +1,128 @@
+/* =================================== */
+/* 1.5 BARRA DO TOPO (ENDEREÇO)        */
+/* =================================== */
+
+.top-bar {
+    background-color: var(--cor-fundo-claro); /* Usa o cinza claro que definimos */
+    padding: 8px 0; /* Espaçamento vertical pequeno para deixá-la fina */
+    font-size: 14px; /* Tamanho da fonte um pouco menor */
+    color: var(--cor-texto-secundario);
+    border-bottom: 1px solid var(--cor-borda-sutil);
+}
+
+.top-bar p {
+    /* Alinha o ícone e o texto na mesma linha */
+    display: flex;
+    align-items: center;
+}
+
+.top-bar i {
+    color: var(--cor-texto-preto); /* Deixa o ícone vermelho para dar destaque */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* =================================== */
+/* 2. CABEÇALHO                        */
+/* =================================== */
+
+header {
+    background-color: var(--cor-fundo-branco);
+    padding: 10px 0;
+}
+
+/* O container principal do header que alinha tudo */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* O container dos logos */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre os logos */
+}
+
+/* Tamanho das imagens dos logos */
+.logo-img {
+    height: 55px;
+}
+
+/* Estilos da lista do menu */
+nav ul li {
+    display: inline-block; /* Coloca os itens lado a lado */
+    margin-left: 20px;
+}
+
+/* Estilos dos links do menu */
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto-preto);
+    font-weight: 500; /* Peso médio da fonte Heebo */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque); /* Vermelho ao passar o mouse */
+}
+
+/* Bloco de Emergência */
+.bloco-emergencia {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-branco);
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.bloco-emergencia i {
+    font-size: 24px;
+}
+
+.texto-emergencia span {
+    font-size: 13px;
+    display: block;
+    line-height: 1.2;
+}
+
+.texto-emergencia strong {
+    font-size: 16px;
+    font-weight: 700; /* Negrito */
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+/* O ícone de seta dentro do link */
+nav .dropdown a i {
+    font-size: 12px; /* Deixa a seta um pouco menor que o texto */
+    margin-left: 5px;
+}
+
+/* O menu dropdown em si (escondido por padrão) */
+.dropdown-menu {
+    display: none; /* ESCONDIDO POR PADRÃO */
+    position: absolute; /* Permite que ele flutue sobre o resto do site */
+    top: 150%; /* Posição inicial abaixo do item "Outros" */
+    left: 50%;
+    transform: translateX(-50%); /* Truque para centralizar o menu abaixo do pai */
+    background-color: var(--cor-fundo-branco);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    list-style: none;
+    min-width: 220px; /* Largura mínima do menu */
+    z-index: 100;
+}
+
+/* Links dentro do dropdown */
+.dropdown-menu li a {
+    display: block; /* Faz o link ocupar toda a largura do item */
+    padding: 12px 20px;
+    font-weight: 500;
+}

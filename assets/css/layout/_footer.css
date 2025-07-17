@@ -1,0 +1,106 @@
+/* =================================== */
+/* 9. RODAPÉ (FOOTER)                  */
+/* =================================== */
+
+.footer-main {
+    background-color: var(--cor-texto-branco);
+    padding: 60px 0;
+    border-top: 1px solid var(--cor-borda-sutil);
+}
+
+.footer-main .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Espaço entre as colunas */
+}
+
+.footer-col {
+    /* Cada coluna terá uma base de largura, mas pode crescer se houver espaço */
+    flex-basis: 300px; 
+}
+
+/* Coluna dos Logos */
+.footer-col.logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* Redefinimos a base para o tamanho do conteúdo */
+    flex-basis: auto; 
+}
+
+.footer-col.logos img {
+    height: 60px; /* Tamanho dos logos no rodapé */
+}
+
+/* Títulos das colunas */
+.footer-col h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Parágrafos da coluna de atendimento */
+.footer-col.atendimento p {
+    margin-bottom: 15px;
+    color: var(--cor-texto-preto);
+}
+.footer-col.atendimento p strong {
+    color: var(--cor-texto-preto);
+}
+
+/* Lista de links importantes */
+.footer-col.links ul {
+    list-style: none;
+}
+
+.footer-col.links li {
+    margin-bottom: 12px;
+}
+
+.footer-col.links a {
+    text-decoration: none;
+    color: var(--cor-texto-preto);
+    transition: color 0.3s ease;
+}
+
+.footer-col.links a:hover {
+    color: var(--cor-destaque);
+}
+
+/* --- Barra Inferior do Rodapé (Copyright e Redes Sociais) --- */
+
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid var(--cor-borda-sutil);
+    font-size: 14px;
+    background-color: var(--cor-destaque);
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--cor-texto-branco);
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--cor-texto-branco);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--cor-vermelha);
+}

@@ -1,0 +1,127 @@
+/* =================================== */
+/* ESTILOS PÁGINA "COMO DENUNCIAR"     */
+/* =================================== */
+
+/* --- Layout Principal da Página --- */
+
+/* Bloco de conteúdo alinhado à esquerda */
+.conteudo-bloco-texto {
+    max-width: 850px;
+    margin-bottom: 60px; /* Espaço até a próxima seção (FAQ) */
+}
+
+/* Espaçamento e linha entre as seções DENTRO do bloco esquerdo */
+.conteudo-bloco-texto section {
+    border-top: 1px solid var(--cor-borda-sutil);
+    margin-top: 50px;
+    padding-top: 50px;
+}
+.conteudo-bloco-texto section:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* --- Estilos do Breadcrumb --- */
+.breadcrumb {
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--cor-vermelha);
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.breadcrumb a {
+    color: var(--cor-vermelha);
+    text-decoration: none;
+    font-weight: 500;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos Gerais de Títulos e Textos --- */
+
+.conteudo-bloco-texto h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+.subtitulo-pagina {
+    font-size: 1.2rem;
+    color: var(--cor-texto-preto);
+    margin-bottom: 40px;
+}
+#info-importantes h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.passo-item, .info-bloco {
+    margin-bottom: 35px;
+}
+.passo-item:last-child, .info-bloco:last-child {
+    margin-bottom: 0;
+}
+
+.passo-item h3, .info-bloco h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.passo-item p, .lista-contatos-denuncia p, .passo-item li, .info-bloco p {
+    color: var(--cor-texto-preto);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+.passo-item ul {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+
+/* --- Estilos da Seção FAQ (Centralizada) --- */
+.faq {
+    padding: 60px 0;
+    border-top: 1px solid var(--cor-borda-sutil);
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.accordion details {
+    border-bottom: 1px solid var(--cor-borda-sutil);
+    padding: 20px 0;
+}
+.accordion details:first-of-type {
+    border-top: 1px solid var(--cor-borda-sutil);
+}
+.accordion summary {
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none;
+}
+.accordion summary::before {
+    content: '+';
+    margin-right: 15px;
+    color: var(--cor-vermelha);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.accordion details[open] summary::before {
+    content: '−';
+}
+.accordion details p {
+    padding: 15px 0 0 32px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.7;
+}
