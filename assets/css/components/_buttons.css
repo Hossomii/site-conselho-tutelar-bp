@@ -1,0 +1,65 @@
+.link-destaque {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent; /* Linha de destaque */
+    transition: border-color 0.3s ease;
+}
+
+.link-destaque:hover {
+    border-color: var(--cor-destaque); /* Linha de destaque ao passar o mouse */
+}
+
+/* =================================== */
+/* COMPONENTE: BOTÕES FIXOS LATERAIS   */
+/* =================================== */
+
+.botoes-fixos-container {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-fixo {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: var(--cor-texto-branco);
+    text-decoration: none;
+    font-weight: 700;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    transition: width 0.3s ease-in-out;
+    width: 45px; /* Largura inicial (só ícone) */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btn-fixo:hover {
+    width: 160px; /* Largura expandida */
+}
+
+.btn-fixo i {
+    font-size: 1.5rem;
+    width: 26px; /* Largura fixa para o ícone */
+    text-align: center;
+}
+
+.btn-texto {
+    margin-left: 15px;
+}
+
+/* Cores específicas */
+.btn-denunciar { background-color: var(--cor-vermelha); }
+.btn-denunciar:hover { background-color: var(--cor-vermelho-forte); }
+
+.btn-whatsapp { background-color: var(--cor-whatsapp); }
+.btn-whatsapp:hover { background-color: #128C7E; }

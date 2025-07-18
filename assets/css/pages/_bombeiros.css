@@ -1,0 +1,63 @@
+/* =================================== */
+/* ESTILOS PÁGINA "PAPEL DOS BOMBEIROS" */
+/* =================================== */
+
+/* --- Seção de Imagem Destaque ("Preparação") --- */
+.secao-imagem-destaque.bombeiros-preparo {
+    position: relative;
+    padding: 120px 0;
+    color: var(--cor-texto-branco);
+    text-align: center;
+
+    /* ATENÇÃO: Coloque aqui o nome da sua imagem de fundo */
+    background-image: url('../../images/bombeiro-crianca.png');
+    background-size: cover;
+    background-position: center 10%;
+    margin-bottom: 50px;
+}
+
+.secao-imagem-destaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.secao-imagem-destaque .container {
+    position: relative;
+    z-index: 2;
+}
+
+.secao-imagem-destaque h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.secao-imagem-destaque p {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- Seção "Projetos Sociais" --- */
+.projetos-sociais {
+    padding: 80px 0;
+    background-color: var(--cor-fundo-secao);
+    text-align: center;
+}
+
+.projetos-sociais h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.projetos-sociais p {
+    font-size: 1.2rem;
+    color: var(--cor-texto-terceiro);
+}

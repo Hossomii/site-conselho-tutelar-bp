@@ -64,7 +64,7 @@
 }
 
 .footer-col.links a:hover {
-    color: var(--cor-destaque);
+    color: var(--cor-vermelha);
 }
 
 /* --- Barra Inferior do Rodapé (Copyright e Redes Sociais) --- */
@@ -73,7 +73,7 @@
     padding: 20px 0;
     border-top: 1px solid var(--cor-borda-sutil);
     font-size: 14px;
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-texto-branco);
 }
 
 .footer-bottom .container {
@@ -83,7 +83,7 @@
 }
 
 .copyright {
-    color: var(--cor-texto-branco);
+    color: var(--cor-texto-preto);
 }
 
 .social-links {
@@ -93,7 +93,7 @@
 
 .social-links a {
     text-decoration: none;
-    color: var(--cor-texto-branco);
+    color: var(--cor-texto-preto);
     font-weight: 500;
     display: flex;
     align-items: center;

@@ -9,10 +9,14 @@
 /* 2. Estrutura Principal do Site */
 @import url('layout/_header.css');
 @import url('layout/_footer.css');
+@import url('layout/_page.css');
 
 /* 3. Estilos Específicos da Página Inicial */
 @import url('pages/_home.css');
-@import url('pages/_denuncia.css')
+@import url('pages/_denuncia.css');
+@import url('pages/_bombeiros.css');
+@import url('components/_buttons.css');
+@import url('components/_cards.css');
 
 /* 4. Estilos Responsivos (Sempre por último) */
 /* @import url('responsive.css'); */

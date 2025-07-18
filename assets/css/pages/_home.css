@@ -5,12 +5,13 @@
 .hero {
   position: relative;
   color: var(--cor-texto-branco);
-  padding: 180px 0;
+  padding: 200px 0;
+  text-align: center;
 
   /* Imagem de fundo */
-  background-image: url('/assets/images/banner.jpg');
+  background-image: url('/assets/images/bannerinicial3.webp');
   background-size: cover;
-  background-position: center 70%;
+  background-position: center 40%;
   background-repeat: no-repeat;
 }
 
@@ -38,11 +39,11 @@
   max-width: 1200px;
 }
 
-.hero .subtitulo {
-  font-size: 1.3rem;
-  font-weight: 400;
-  max-width: 780px;
-  opacity: 0.9;
+.hero .subtitulo p {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 780px;
+    opacity: 0.9;
 }
 
 /* =================================== */

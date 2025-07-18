@@ -4,24 +4,6 @@
 
 /* --- Layout Principal da Página --- */
 
-/* Bloco de conteúdo alinhado à esquerda */
-.conteudo-bloco-texto {
-    max-width: 850px;
-    margin-bottom: 60px; /* Espaço até a próxima seção (FAQ) */
-}
-
-/* Espaçamento e linha entre as seções DENTRO do bloco esquerdo */
-.conteudo-bloco-texto section {
-    border-top: 1px solid var(--cor-borda-sutil);
-    margin-top: 50px;
-    padding-top: 50px;
-}
-.conteudo-bloco-texto section:first-child {
-    border-top: none;
-    margin-top: 0;
-    padding-top: 0;
-}
-
 /* --- Estilos do Breadcrumb --- */
 .breadcrumb {
     text-align: right;
@@ -39,47 +21,6 @@
 .breadcrumb a:hover {
     text-decoration: underline;
 }
-
-/* --- Estilos Gerais de Títulos e Textos --- */
-
-.conteudo-bloco-texto h1 {
-    font-size: 2.8rem;
-    font-weight: 900;
-    margin-bottom: 5px;
-}
-.subtitulo-pagina {
-    font-size: 1.2rem;
-    color: var(--cor-texto-preto);
-    margin-bottom: 40px;
-}
-#info-importantes h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.passo-item, .info-bloco {
-    margin-bottom: 35px;
-}
-.passo-item:last-child, .info-bloco:last-child {
-    margin-bottom: 0;
-}
-
-.passo-item h3, .info-bloco h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.passo-item p, .lista-contatos-denuncia p, .passo-item li, .info-bloco p {
-    color: var(--cor-texto-preto);
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-.passo-item ul {
-    list-style-position: outside;
-    padding-left: 20px;
-}
-
 
 /* --- Estilos da Seção FAQ (Centralizada) --- */
 .faq {
@@ -122,6 +63,13 @@
 }
 .accordion details p {
     padding: 15px 0 0 32px;
-    color: var(--cor-texto-secundario);
+    color: var(--cor-texto-preto);
     line-height: 1.7;
+}
+
+#pagina-denuncia .documentos-importantes {
+    background-color: white;
+    border-top: 1px solid var(--cor-borda-sutil);
+    margin-top: 50px;
+    padding-top: 50px;
 }
