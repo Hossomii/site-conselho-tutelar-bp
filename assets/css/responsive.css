@@ -1,139 +1,136 @@
 /* ================================================= */
-/* ARQUIVO DE ESTILOS RESPONSIVOS                    */
-/* Todas as regras aqui dentro só se aplicam a telas */
-/* com 768px de largura ou menos.                    */
+/* ARQUIVO DE ESTILOS RESPONSIVOS (VERSÃO FINAL)     */
+/* Aplicado em telas de 992px de largura ou menores  */
 /* ================================================= */
 
-@media (max-width: 768px) {
-  /* --- GERAL E TIPOGRAFIA --- */
-  .container {
-    padding: 0 15px; /* Diminui o espaçamento lateral em telas menores */
-  }
+@media (max-width: 992px) {
 
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
+    /* --- GERAL E TIPOGRAFIA --- */
+    .container {
+        padding: 0 20px;
+    }
 
-  /* --- CABEÇALHO --- */
+    h1, .hero h1 { font-size: 2.2rem; }
+    h2, .ajuda h2, .parceiros h2 { font-size: 2rem; }
+    h3 { font-size: 1.4rem; }
 
-  /* Esconde a barra do topo e o bloco de emergência no mobile */
-  .top-bar,
-  .bloco-emergencia {
-    display: none;
-  }
+    /* =================================== */
+    /* CABEÇALHO RESPONSIVO                */
+    /* =================================== */
 
-  /* Esconde APENAS a lista de links de desktop (o <ul>) */
-  header nav ul {
-    display: none;
-  }
+    /* Esconde o menu de texto do desktop e o bloco de emergência */
+    header nav > ul,
+    .bloco-emergencia {
+        display: none;
+    }
 
-  /* Mostra o botão hambúrguer */
-  .hamburguer {
-    display: block;
-    z-index: 1001;
-    font-size: 28px;
-    color: var(--cor-texto-preto);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
+    /* Mostra e estiliza o botão hambúrguer */
+    .hamburguer {
+        display: block;
+        font-size: 28px;
+        color: var(--cor-texto-preto);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
 
-  /* Garante que o container do header alinhe o logo e o hambúrguer */
-  header .container {
-    justify-content: space-between;
-    align-items: center;
-  }
+    header .container {
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  /* --- MENU MOBILE (ATIVADO VIA JS) --- */
+    nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .logo-img {
+        height: 45px;
+    }
 
-  /* Quando a NAV ganha a classe .nav-active, ela vira um overlay */
-  header nav.nav-active {
-    display: flex; /* Esta regra fará a nav reaparecer como um overlay */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
+    /* --- MENU MOBILE (ATIVADO VIA JS) --- */
 
-  /* E a lista de links (UL) que estava escondida, agora aparece dentro do overlay */
-  header nav.nav-active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
+    header nav.nav-active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    header nav.nav-active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    header nav.nav-active ul li {
+        margin-left: 0;
+        display: block;
+    }
+    header nav.nav-active ul li a {
+        color: var(--cor-texto-branco);
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 10px;
+    }
 
-  /* Estilo dos itens da lista no menu mobile */
-  header nav.nav-active ul li {
-    margin-left: 0;
-    display: block;
-  }
+    /* Lógica para trocar o ícone */
+    .hamburguer .icon-close { display: none; }
+    .hamburguer.is-active .icon-open { display: none; }
+    .hamburguer.is-active .icon-close { display: block; }
+    .hamburguer.is-active {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        color: var(--cor-texto-branco);
+    }
+    header nav.nav-active .dropdown {
+        display: none;
+    }
 
-  header nav.nav-active ul li a {
-    color: var(--cor-texto-branco);
-    font-size: 1.5rem;
-  }
+    /* --- BANNER PRINCIPAL (HERO) --- */
+    .hero {
+        padding: 80px 0;
+    }
 
-  /* Lógica para trocar o ícone */
-  .hamburguer .icon-close {
-    display: none;
-  }
-  .hamburguer.is-active .icon-open {
-    display: none;
-  }
-  .hamburguer.is-active .icon-close {
-    display: block;
-  }
+    hero h1 {
+      font-size: 2.5em;
+    }
 
-  /* Esconde o submenu dropdown no menu mobile para simplificar */
-  header nav.nav-active .dropdown {
-    display: none;
-  }
-  /* --- BANNER PRINCIPAL (HERO) --- */
-  .hero {
-    padding: 80px 0;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero .subtitulo {
-    font-size: 1rem;
-  }
+    .hero .subtitulo {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
 
-  /* --- SEÇÃO "COMO PODEMOS AJUDAR" --- */
-  .ajuda-cards {
-    flex-direction: column; /* Empilha as 3 colunas */
-    align-items: center; /* Centraliza as colunas empilhadas */
-    gap: 30px;
-  }
-  .coluna-ajuda {
-    align-items: center; /* Centraliza os itens dentro de cada coluna */
-  }
-  .ajuda-item {
-    justify-content: center;
-  }
+    /* --- SEÇÃO "COMO PODEMOS AJUDAR" --- */
+    .ajuda-cards {
+        flex-direction: column; 
+        gap: 0;
+    }
+    .coluna-ajuda {
+        margin-bottom: 20px;
+        width: 100%; 
+    }
 
-  /* --- SEÇÃO DE PARCEIROS --- */
-  .lista-parceiros {
-    text-align: center;
-  }
+    /* --- RODAPÉ --- */
+    .footer-main .container,
+    .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-col.logos {
+        flex-direction: row;
+        justify-content: center;
+    }
 
-  /* --- RODAPÉ --- */
-  .footer-main .container,
-  .footer-bottom .container {
-    flex-direction: column; /* Empilha as colunas */
-    text-align: center;
-    gap: 30px;
-  }
-}
+} 
