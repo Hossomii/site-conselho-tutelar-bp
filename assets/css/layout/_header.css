@@ -1,134 +1,173 @@
 /* =================================== */
 /* 1.5 BARRA DO TOPO (ENDEREÇO)        */
 /* =================================== */
-
 .top-bar {
-    background-color: var(--cor-fundo-claro);
+    background-color: var(--cor-fundo-secao);
     padding: 8px 0;
     font-size: 14px;
-    color: var(--cor-texto-secundario);
     border-bottom: 1px solid var(--cor-borda-sutil);
 }
-
 .top-bar p {
     display: flex;
     align-items: center;
+    color: var(--cor-texto-secundario);
 }
-
-.top-bar p i {
-    color: var(--cor-vermelha); /* Corrigido para usar a variável vermelha */
+.top-bar i {
+    color: var(--cor-vermelha);
     margin-right: 8px;
 }
 
 /* =================================== */
-/* 2. CABEÇALHO                        */
+/* 2. CABEÇALHO (VERSÃO FINAL)         */
 /* =================================== */
-
 header {
-    background-color: var(--cor-fundo-branco);
-    padding: 10px 0;
-    position: relative; /* Garante o empilhamento correto do dropdown */
-    z-index: 1000;      /* Garante o empilhamento correto do dropdown */
+    background-color: var(--cor-texto-branco);
+    position: relative;
+    z-index: 1000;
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 80px;
 }
 
+/* Itens do Header */
 .logo-container {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .logo-img {
-    height: 55px;
+    height: 50px;
+}
+.bloco-emergencia {
+    flex-shrink: 0;
+}
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
-nav ul li {
+/* Navegação e links */
+nav > ul {
+    text-align: center;
+    list-style: none; /* Garante que não haja marcadores */
+}
+nav > ul > li {
     display: inline-block;
-    margin-left: 20px;
+    margin: 0 15px;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
 }
-
-nav ul li a {
+/* Aumenta a área de hover do link para criar a "ponte" */
+nav > ul > li > a {
     text-decoration: none;
     color: var(--cor-texto-preto);
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 30px 5px; 
 }
-
-nav ul li a:hover {
+nav > ul > li > a:hover {
     color: var(--cor-vermelha);
 }
 
 /* Bloco de Emergência */
 .bloco-emergencia {
+    display: flex;
     background-color: var(--cor-destaque);
     color: var(--cor-texto-branco);
-    padding: 8px 15px;
-    display: flex;
+    padding: 10px 18px;
+    border-radius: 8px;
     align-items: center;
     gap: 12px;
-    align-self: stretch;
-    margin-top: -10px;
-    margin-bottom: -10px;
 }
+.bloco-emergencia i { font-size: 24px; }
+.texto-emergencia span { font-size: 13px; display: block; line-height: 1.2; }
+.texto-emergencia strong { font-size: 16px; font-weight: 700; }
+.hamburguer { display: none; }
 
-.bloco-emergencia i {
-    font-size: 24px;
-}
-
-.texto-emergencia span {
-    font-size: 13px;
-    display: block;
-    line-height: 1.2;
-}
-
-.texto-emergencia strong {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-/* --- MENU DROPDOWN --- */ 
-
+/* --- MEGA MENU (VERSÃO FINAL E FUNCIONAL) --- */ 
 nav .dropdown {
-    position: relative;
+    position: relative; /* GARANTE QUE O 'li' SEJA A REFERÊNCIA */
 }
 
-nav .dropdown a i {
-    font-size: 12px;
-    margin-left: 5px;
-}
-
-/* O menu dropdown em si (escondido por padrão) */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    
-    /* Posiciona o menu colado na parte de baixo do item pai */
-    top: 100%; 
+.mega-menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; /* POSICIONA LOGO ABAIXO DO 'li' (na área da ponte) */
     left: 50%;
     transform: translateX(-50%);
-
-    padding-top: 10px; /* Cria um espaçamento INTERNO para o conteúdo */
-
-    background-color: var(--cor-texto-branco);
+    width: 100vw; /* Ocupa 100% da largura da TELA */
+    max-width: 1200px; /* Limita a largura máxima do menu */
+    
+    background-color: var(--cor-texto-branco); /* Fundo branco sólido */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-top: 1px solid var(--cor-borda-sutil);
+    padding: 40px 0;
+    z-index: 999;
+}
+nav .dropdown:hover .mega-menu {
+    display: block;
+}
+
+.mega-menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.mega-menu-column {
+    flex: 1;
+    text-align: left;
+}
+.mega-menu-column h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: var(--cor-texto-preto);
+}
+.mega-link {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+}
+.mega-link:hover {
+    background-color: var(--cor-fundo-secao);
+}
+.mega-link strong {
+    display: block;
+    color: var(--cor-texto-preto);
+    font-weight: 700;
+}
+.mega-link small {
+    color: var(--cor-texto-secundario);
+}
+.mega-list {
     list-style: none;
-    min-width: 220px;
-    z-index: 100;
+    padding: 0;
 }
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 20px;
-    font-weight: 500;
+.mega-list li {
+    margin-bottom: 12px;
 }
-
-/* Mostra o menu dropdown quando o mouse passa sobre o item pai */
-nav .dropdown:hover .dropdown-menu {
-    display: block;
+.mega-list a {
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+}
+.mega-list a:hover {
+    color: var(--cor-vermelha);
+}
+nav .dropdown > a i {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+nav .dropdown:hover > a i {
+    transform: rotate(180deg);
 }

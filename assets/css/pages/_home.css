@@ -9,7 +9,7 @@
   text-align: center;
 
   /* Imagem de fundo */
-  background-image: url('/assets/images/bannerinicial3.webp');
+  background-image: url('/assets/images/crianca-brincando-com-bloco.jpg');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   z-index: 1;
 }
 
@@ -39,11 +39,12 @@
   max-width: 1200px;
 }
 
-.hero .subtitulo p {
-    font-size: 2rem;
+.hero .subtitulo {
+    font-size: 1.5rem;
     font-weight: 400;
     max-width: 780px;
     opacity: 0.9;
+    margin: 0 auto;
 }
 
 /* =================================== */
@@ -238,7 +239,7 @@
 .parceiros {
     background-color: var(--cor-texto-preto);
     color: var(--cor-texto-branco);
-    padding: 80px 0;
+    padding: 50px 0;
     text-align: center;
 }
 

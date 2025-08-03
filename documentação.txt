@@ -38,7 +38,6 @@ A versão para telas grandes (desktop) das seguintes páginas está 100% COMPLET
 ### 3. Funcionalidades Implementadas (CSS)
 - **Menu Dropdown:** O menu "Outros" no cabeçalho já está funcional ao passar o mouse (hover).
 - **Botões Fixos Laterais:** Os botões "Denunciar" e "WhatsApp" estão implementados com animação de expansão.
-- **Efeito Parallax:** Seções com imagem de fundo possuem o efeito de imagem fixa ao rolar a página.
 
 -------------------------------------------------------------------
 

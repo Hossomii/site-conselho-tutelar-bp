@@ -1,0 +1,139 @@
+/* ================================================= */
+/* ARQUIVO DE ESTILOS RESPONSIVOS                    */
+/* Todas as regras aqui dentro só se aplicam a telas */
+/* com 768px de largura ou menos.                    */
+/* ================================================= */
+
+@media (max-width: 768px) {
+  /* --- GERAL E TIPOGRAFIA --- */
+  .container {
+    padding: 0 15px; /* Diminui o espaçamento lateral em telas menores */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  /* --- CABEÇALHO --- */
+
+  /* Esconde a barra do topo e o bloco de emergência no mobile */
+  .top-bar,
+  .bloco-emergencia {
+    display: none;
+  }
+
+  /* Esconde APENAS a lista de links de desktop (o <ul>) */
+  header nav ul {
+    display: none;
+  }
+
+  /* Mostra o botão hambúrguer */
+  .hamburguer {
+    display: block;
+    z-index: 1001;
+    font-size: 28px;
+    color: var(--cor-texto-preto);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Garante que o container do header alinhe o logo e o hambúrguer */
+  header .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* --- MENU MOBILE (ATIVADO VIA JS) --- */
+
+  /* Quando a NAV ganha a classe .nav-active, ela vira um overlay */
+  header nav.nav-active {
+    display: flex; /* Esta regra fará a nav reaparecer como um overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  /* E a lista de links (UL) que estava escondida, agora aparece dentro do overlay */
+  header nav.nav-active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* Estilo dos itens da lista no menu mobile */
+  header nav.nav-active ul li {
+    margin-left: 0;
+    display: block;
+  }
+
+  header nav.nav-active ul li a {
+    color: var(--cor-texto-branco);
+    font-size: 1.5rem;
+  }
+
+  /* Lógica para trocar o ícone */
+  .hamburguer .icon-close {
+    display: none;
+  }
+  .hamburguer.is-active .icon-open {
+    display: none;
+  }
+  .hamburguer.is-active .icon-close {
+    display: block;
+  }
+
+  /* Esconde o submenu dropdown no menu mobile para simplificar */
+  header nav.nav-active .dropdown {
+    display: none;
+  }
+  /* --- BANNER PRINCIPAL (HERO) --- */
+  .hero {
+    padding: 80px 0;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .subtitulo {
+    font-size: 1rem;
+  }
+
+  /* --- SEÇÃO "COMO PODEMOS AJUDAR" --- */
+  .ajuda-cards {
+    flex-direction: column; /* Empilha as 3 colunas */
+    align-items: center; /* Centraliza as colunas empilhadas */
+    gap: 30px;
+  }
+  .coluna-ajuda {
+    align-items: center; /* Centraliza os itens dentro de cada coluna */
+  }
+  .ajuda-item {
+    justify-content: center;
+  }
+
+  /* --- SEÇÃO DE PARCEIROS --- */
+  .lista-parceiros {
+    text-align: center;
+  }
+
+  /* --- RODAPÉ --- */
+  .footer-main .container,
+  .footer-bottom .container {
+    flex-direction: column; /* Empilha as colunas */
+    text-align: center;
+    gap: 30px;
+  }
+}

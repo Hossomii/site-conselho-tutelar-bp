@@ -17,6 +17,4 @@
 @import url('pages/_bombeiros.css');
 @import url('components/_buttons.css');
 @import url('components/_cards.css');
-
-/* 4. Estilos Responsivos (Sempre por último) */
-/* @import url('responsive.css'); */
+@import url('responsive.css');

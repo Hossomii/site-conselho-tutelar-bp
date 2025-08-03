@@ -4,7 +4,7 @@
 
 /* A "caixa" principal para seções de texto */
 .bloco-de-texto {
-    max-width: 1000px; /* Largura máxima para boa leitura */
+    max-width: 1200px; /* Largura máxima para boa leitura */
     margin-bottom: 80px; /* Espaço antes do rodapé ou da próxima seção */
 }
 

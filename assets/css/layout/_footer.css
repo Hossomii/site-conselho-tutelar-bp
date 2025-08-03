@@ -26,6 +26,7 @@
     align-items: center;
     /* Redefinimos a base para o tamanho do conteúdo */
     flex-basis: auto; 
+    flex-direction: column; /* deixa as logos uma acima da outra */
 }
 
 .footer-col.logos img {
