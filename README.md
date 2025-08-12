@@ -39,7 +39,7 @@ O site foi construído do zero com foco em tecnologias web modernas e boas prát
 * ✅ **Estilização Desktop:** O design de todas as páginas para telas grandes está 100% completo.
 * ✅ **Responsividade Completa:** O layout se adapta perfeitamente a desktops, tablets e celulares.
 * ✅ **Interatividade com JavaScript:** Menu hambúrguer, botão "Voltar ao Topo" e carregamento de componentes estão funcionais.
-* 🔗 **Deploy na Vercel:** O link de acesso público será adicionado aqui após a publicação.
+* 🔗 **Deploy na Vercel:** https://conselho-tutelar-bom-principio.vercel.app/.
 
 ---
 
