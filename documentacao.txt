@@ -1,0 +1,49 @@
+Documentação do Projeto: Site Institucional - Conselho Tutelar e Bombeiros Voluntários de Bom Princípio
+Autor: Anthony S. Bugs
+Data da Versão: 12 de Agosto de 2025
+Status: Versão 1.0 - Pronta para Deploy
+
+1. Visão geral do Projeto:
+
+Este projeto consiste no desenvolvimento de um site institucional estático, criado como parte de uma atividade de extensão do curso de Análise e Desenvolvimento de Sistemas. O objetivo principal é servir como um portal de informações centralizado para a comunidade de Bom Princípio, RS, detalhando os serviços do Conselho Tutelar e a sua parceria estratégica com o Corpo de Bombeiros Voluntários local. O site visa promover a conscientização sobre os direitos de crianças e adolescentes , educar a população sobre como e quando acionar os serviços de proteção, e fornecer canais de denúncia claros e acessíveis
+
+2. Arquitetura e Tecnologias Utilizadas
+O site foi construído do zero, focando em boas práticas, manutenibilidade e performance.
+
+Tecnologias Base:
+HTML5: Para a estruturação semântica do conteúdo.
+CSS3: Para toda a estilização visual e responsividade.
+JavaScript (ES6+): Para carregar componentes dinamicamente e adicionar interatividade.
+Estrutura de Arquivos:
+O projeto segue uma estrutura de arquivos modular para facilitar a localização e edição de código:
+
+/
+|-- index.html
+|-- como-denunciar.html
+|-- papel-dos-bombeiros.html
+|-- _partials/
+|   |-- _header.html
+|   |-- _footer.html
+|-- assets/
+|   |-- css/
+|   |   |-- main.css         (Arquivo principal que importa os outros)
+|   |   |-- responsive.css   (Estilos para telas pequenas)
+|   |   |-- base/            (_variables.css, _base.css)
+|   |   |-- layout/          (_header.css, _footer.css, _page.css)
+|   |   |-- pages/           (_home.css, _denuncia.css, _bombeiros.css)
+|   |   |-- components/      (_buttons.css, etc.)
+|   |-- js/
+|   |   |-- main.js          (Todo o código JavaScript)
+|   |-- images/              (Imagens de banner, etc.)
+|   |-- svg/                 (Logos e ícones em formato vetorial)
+
+3. Páginas Criadas
+
+index.html (Página Inicial):
+Serve como o portal principal. Apresenta um banner de impacto, links de navegação visual ("Como podemos ajudar você?") e seções-âncora que resumem os principais tópicos do site: O que é o Conselho, Quando acionar, Documentos e Parceiros.
+
+como-denunciar.html (Como Denunciar):
+Uma página de conteúdo detalhado que oferece um passo a passo claro sobre como proceder para fazer uma denúncia. Inclui os contatos oficiais, informações essenciais a serem reunidas, e uma seção de Perguntas Frequentes (FAQ) para tirar dúvidas comuns.
+
+papel-dos-bombeiros.html (Papel dos Bombeiros):
+Página dedicada a detalhar a atuação dos Bombeiros Voluntários no contexto da proteção infantil. Inclui os tipos de ocorrências que atendem, como se preparam para lidar com crianças e adolescentes, e os projetos sociais que desenvolvem com a comunidade jovem.

@@ -3,15 +3,15 @@
  * Ela só é chamada DEPOIS que o cabeçalho estiver na página.
  */
 const inicializarMenuHamburguer = () => {
-    const hamburguerBtn = document.querySelector("#hamburguer-btn");
-    const navMenu = document.querySelector("header nav");
+  const hamburguerBtn = document.querySelector("#hamburguer-btn");
+  const navMenu = document.querySelector("header nav");
 
-    if (hamburguerBtn && navMenu) {
-        hamburguerBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('nav-active');
-            hamburguerBtn.classList.toggle('is-active');
-        });
-    }
+  if (hamburguerBtn && navMenu) {
+    hamburguerBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("nav-active");
+      hamburguerBtn.classList.toggle("is-active");
+    });
+  }
 };
 
 /**
@@ -21,25 +21,57 @@ const inicializarMenuHamburguer = () => {
  * @param {function} callback - Uma função para ser executada após o carregamento.
  */
 const loadHTMLComponent = (filePath, elementId, callback) => {
-    fetch(filePath)
-        .then(response => response.ok ? response.text() : Promise.reject('Arquivo não encontrado.'))
-        .then(data => {
-            const placeholder = document.getElementById(elementId);
-            if (placeholder) {
-                placeholder.outerHTML = data; // Substitui o placeholder pelo conteúdo
-            }
-            if (callback) {
-                callback();
-            }
-        })
-        .catch(error => console.error(`Falha ao carregar ${filePath}:`, error));
+  fetch(filePath)
+    .then((response) =>
+      response.ok ? response.text() : Promise.reject("Arquivo não encontrado.")
+    )
+    .then((data) => {
+      const placeholder = document.getElementById(elementId);
+      if (placeholder) {
+        placeholder.outerHTML = data; // Substitui o placeholder pelo conteúdo
+      }
+      if (callback) {
+        callback();
+      }
+    })
+    .catch((error) => console.error(`Falha ao carregar ${filePath}:`, error));
+};
+
+const inicializarBotaoVoltarTopo = () => {
+  const backToTopButton = document.querySelector("#btn-voltar-topo");
+
+  if (backToTopButton) {
+    // Mostra ou esconde o botão baseado na rolagem da página
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        // Mostra o botão depois de rolar 400px
+        backToTopButton.classList.add("show");
+      } else {
+        backToTopButton.classList.remove("show");
+      }
+    });
+
+    // Adiciona a ação de clique para rolar para o topo
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 };
 
 // Evento principal que roda quando o DOM está pronto
-document.addEventListener('DOMContentLoaded', () => {
-    // Carrega o cabeçalho e, no final, executa a função para ativar o menu
-    loadHTMLComponent('_partials/_header.html', 'header-placeholder', inicializarMenuHamburguer);
-    
-    // Carrega o rodapé
-    loadHTMLComponent('_partials/_footer.html', 'footer-placeholder');
+document.addEventListener("DOMContentLoaded", () => {
+  // Carrega o cabeçalho e, no final, executa a função para ativar o menu
+  loadHTMLComponent(
+    "_partials/_header.html",
+    "header-placeholder",
+    inicializarMenuHamburguer
+  );
+
+  // Carrega o rodapé
+  loadHTMLComponent("_partials/_footer.html", "footer-placeholder");
+
+  inicializarBotaoVoltarTopo()
 });
